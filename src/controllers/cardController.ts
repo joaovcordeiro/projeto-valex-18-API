@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as cardRepository from '../repositories/cardRepository.js';
 import * as cardService from '../services/createCardService.js';
+import * as activateCardService from '../services/activateCardService.js';
 
 
 export async function createCard(req: Request, res: Response) {
@@ -26,3 +27,19 @@ export async function createCard(req: Request, res: Response) {
     }
 };
 
+export async function activateCard(req: Request, res: Response) {
+    try {
+        const { id: cardId, securityCode, password }: { id: number, securityCode: string, password: string } = req.body;
+
+        if (!cardId || !securityCode || !password) {
+            return res.status(400).send('Missing required fields');
+        }
+
+        const updatedCard = await activateCardService.activateCard(cardId, securityCode, password);
+
+        res.status(200).send(updatedCard);
+    }
+    catch {
+        res.status(500).send('Internal server error');
+    }
+}

@@ -30,12 +30,13 @@ API:
         "employeeId" : 0,
         "cardType" : "restaurant"
     }
-- POST /login
-    - Rota para fazer login
+- PUT /card/activate
+    - Rota para fazer a ativação do cartão, ou seja adicionar uma senha de uso.
     - headers: {}
     - body: {
-    "email": "lorem@gmail.com",
-    "senha": "loremipsum"
+    "id": 1,
+    "securityCode": "413",
+    "password": "4123
     }
 - GET /usuarios (autenticada)
     - Rota para listar todos os usuários

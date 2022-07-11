@@ -14,6 +14,7 @@ export async function createCard(apiKey, cardType: cardRepository.TransactionTyp
     const cvc = generateCVC();
     const encriptedCVC = cryptr.encrypt(cvc);
     // const decriptedCVC = cryptr.decrypt(encriptedCVC);
+    console.log(cvc);
 
     if (!company) {
         return null;
