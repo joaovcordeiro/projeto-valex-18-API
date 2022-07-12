@@ -1,4 +1,4 @@
-import { faker } from 'faker';
+import { faker } from '@faker-js/faker';
 import * as rechargeRepository from '../repositories/rechargeRepository.js';
 import * as paymentRepository from '../repositories/paymentRepository.js';
 import * as cardRepository from '../repositories/cardRepository.js';
