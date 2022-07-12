@@ -4,7 +4,7 @@
   </a>
 
   <h3 align="center">
-    $nome-repositorio
+    projeto-valex-18-API
   </h3>
 </p>
 
