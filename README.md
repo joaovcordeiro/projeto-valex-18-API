@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/$username-github/$nome-repositorio">
+  <a href="https://github.com/Offjhonjhon/projeto-valex-18-API">
     <img src="./readme.png" alt="readme-logo" width="80" height="80">
   </a>
 
@@ -11,9 +11,9 @@
 ## Usage
 
 ```bash
-$ git clone https://github.com/$username-github/$nome-repositorio
+$ git clone https://github.com/Offjhonjhon/projeto-valex-18-API.git
 
-$ cd $nome-repositorio
+$ cd projeto-valex-18-API
 
 $ npm install
 
