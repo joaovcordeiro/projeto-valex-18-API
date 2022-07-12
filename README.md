@@ -23,7 +23,7 @@ $ npm run dev
 API:
 
 ```
-- POST /card/create
+- POST /card/create (autenticada)
     - Rota para cadastrar um novo cartão para o empregado
     - headers: {x-api-key}
     - body: {
@@ -38,24 +38,47 @@ API:
     "securityCode": "413",
     "password": "4123
     }
-- GET /usuarios (autenticada)
-    - Rota para listar todos os usuários
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
-- GET /usuarios/:id (autenticada)
-    - Rota para listar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
-- PUT /usuarios/:id (autenticada)
-    - Rota para atualizar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
+- GET /card/visualize 
+    - Rota para listar os cartões que pertencem ao usuario e que possuem a senha enviada.
+    - headers: {}
     - body: {
-        "nome": "Lorem ipsum2",
-        "email": "lorem2@gmail.com",
-        "senha": "loremipsum2"
+        "employeeId": 2,
+        "cardPassword": "3042"
     }
-- DELETE /usuarios/:id (autenticada)
-    - Rota para deletar um usuário pelo id
-    - headers: { "Authorization": "Bearer $token" }
-    - body: {}
+- POST /card/recharge (autenticada)
+    - Rota para realizar a recarga do cartão
+    - headers: {x-api-key}
+    - body: {
+        "cardId": 1, 
+        "rechargeAmount": 300
+    }
+- GET /card/balance
+    - Rota para receber o balanço de recargas e compras do cartão
+    - headers: {}
+    - body: {
+        "cardId": 1
+    }
+- POST /card/payment 
+    - Rota para realizar uma compra no cartão
+    - headers: {}
+    - body: {
+        "cardId": 1,
+        "cardPassword": "1234",
+        "businessesId": 1,
+        "amount": 1000
+    }
+- POST /card/block 
+    - Rota para realizar o bloqueio do cartão
+    - headers: {}
+    - body: {
+        "cardId": 1,
+        "cardPassword": "1234",
+    }
+- POST /card/unlock 
+    - Rota para realizar o desbloqueio do cartão
+    - headers: {}
+    - body: {
+        "cardId": 1,
+        "cardPassword": "1234",
+    }
 ```

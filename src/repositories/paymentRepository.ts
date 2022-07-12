@@ -14,7 +14,8 @@ export async function findByCardId(cardId: number) {
   const result = await connection.query<PaymentWithBusinessName, [number]>(
     `SELECT 
       payments.*,
-      businesses.name as "businessName"
+      businesses.name as "businessName",
+      businesses.id as "businessId"
      FROM payments 
       JOIN businesses ON businesses.id=payments."businessId"
      WHERE "cardId"=$1
