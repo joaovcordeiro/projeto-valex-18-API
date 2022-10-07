@@ -22,9 +22,9 @@ $ npm run dev
 
 
  
-- POST /card/create (autenticada)
+- POST /card/create (authenticated)
   ```
-    - Rota para cadastrar um novo cartão para o empregado
+    - Route to register a new card for the employee
     - headers: {x-api-key}
     - body: {
         "employeeId" : 0,
@@ -33,7 +33,7 @@ $ npm run dev
   ```
 - PUT /card/activate
   ```
-    - Rota para fazer a ativação do cartão, ou seja adicionar uma senha de uso.
+    - Route to activate the card, that is, add a password to use.
     - headers: {}
     - body: {
     "id": 1,
@@ -43,16 +43,16 @@ $ npm run dev
   ```
 - GET /card/visualize 
   ```
-    - Rota para listar os cartões que pertencem ao usuario e que possuem a senha enviada.
+    - Route to list the cards that belong to the user and that have the password sent.
     - headers: {}
     - body: {
         "employeeId": 2,
         "cardPassword": "3042"
     }
   ```
-- POST /card/recharge (autenticada)
+- POST /card/recharge (authenticated)
   ```
-    - Rota para realizar a recarga do cartão
+    - Route to recharge the card
     - headers: {x-api-key}
     - body: {
         "cardId": 1, 
@@ -61,7 +61,7 @@ $ npm run dev
   ```
 - GET /card/balance
   ```
-    - Rota para receber o balanço de recargas e compras do cartão
+    - Route to receive the balance of card recharges and purchases
     - headers: {}
     - body: {
         "cardId": 1
@@ -69,7 +69,7 @@ $ npm run dev
   ```
 - POST /card/payment 
   ```
-    - Rota para realizar uma compra no cartão
+    - Route to make a purchase on the card
     - headers: {}
     - body: {
         "cardId": 1,
@@ -80,7 +80,7 @@ $ npm run dev
   ```
 - POST /card/block 
   ```
-    - Rota para realizar o bloqueio do cartão
+    - Route to perform card blocking
     - headers: {}
     - body: {
         "cardId": 1,
@@ -89,7 +89,7 @@ $ npm run dev
   ```
 - POST /card/unlock 
   ```
-    - Rota para realizar o desbloqueio do cartão
+    - Route to unlock the card
     - headers: {}
     - body: {
         "cardId": 1,
