@@ -10,7 +10,7 @@
 ##  INSTALLATION
 
 ```bash
-$ git clone https://github.com/Offjhonjhon/projeto-valex-18-API.git
+$ git clone https://github.com/joaovcordeiro/projeto-valex-18-API.git
 
 $ cd projeto-valex-18-API
 
