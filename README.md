@@ -5,6 +5,7 @@
 </p>
 <br>
 <p > <b>The Valex project is an API to create benefits cards for employees<b> </p>
+ </div>
 
 ##  INSTALLATION
 
