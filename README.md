@@ -1,12 +1,10 @@
-<p align="center">
-  <a href="https://github.com/Offjhonjhon/projeto-valex-18-API">
-    <img src="./readme.png" alt="readme-logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">
-    projeto-valex-18-API
-  </h3>
+<div align="center">
+<h1>VALEX</h1>
+<p>
+<img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f355.svg" alt="Pizza emoji" width=200px/>
 </p>
+<br>
+<p > <b>The Valex project is an API to create benefits cards for employees<b> </p>
 
 ## Usage
 
